@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="interface\" />
+    <None Remove="context\" />
+    <None Remove="CornerKitchen.Tech.UnitOfWork" />
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="interface\" />
+    <Folder Include="context\" />
+    <Folder Include="model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CornerKitchen.Tech.UnitOfWork">
+      <HintPath>..\..\CornerKitchen.Tech.UnitOfWork\CornerKitchen.Tech.UnitOfWork\bin\Debug\netcoreapp3.1\CornerKitchen.Tech.UnitOfWork.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+  </ItemGroup>
+</Project>
